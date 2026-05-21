@@ -1,4 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
+export PYTHONPATH="$HOME/code/quentna${PYTHONPATH:+:$PYTHONPATH}"
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
@@ -70,3 +71,6 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Charge les secrets / env perso non versionnés (hors repo dotfiles public)
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
